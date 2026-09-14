@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VDH Sistema — Gestão de Aluguel de Ternos</title>
+<meta name="description" content="Protótipo de sistema de gestão modular para locadora de ternos: estoque, reservas, clientes e controle de acessos por módulo.">
+<link rel="icon" href="assets/img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <img src="assets/img/logo.webp" alt="VDH" width="34" height="34">
+      <div>
+        <strong>VDH Sistema</strong>
+        <span>Gestão da loja</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebar-nav"><!-- injetado via JS --></nav>
+
+    <div class="sidebar-footer">
+      <p>Protótipo v0.1 · dados de demonstração</p>
+    </div>
+  </aside>
+
+  <div class="app-main">
+
+    <header class="topbar">
+      <button class="icon-btn" id="menu-toggle" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <h1 class="view-title" id="view-title">Dashboard</h1>
+
+      <div class="topbar-actions">
+        <div class="role-switch" title="Alternar visão de demonstração">
+          <span class="role-label">Visão:</span>
+          <button class="role-btn active" data-role="admin" id="role-admin">Administrador</button>
+          <button class="role-btn" data-role="cliente" id="role-cliente">Cliente (loja)</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="view" id="view">
+      <!-- conteúdo injetado via JS -->
+    </main>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Fechar">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
